@@ -1,0 +1,8 @@
+This repository contains a modified version of Carrot, But Userscript.
+
+Upstream project: https://github.com/Yan233th/carrot-but-userscript
+Original author: Yan233_
+Upstream license: GNU Affero General Public License v3.0 or later
+
+Modifications in this fork include current-user standings pinning, logged-in handle detection,
+conditional standings reconstruction for omitted contestants, and pinned-row prediction/rank rendering.
