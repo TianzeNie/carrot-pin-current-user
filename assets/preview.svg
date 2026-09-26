@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="190" viewBox="0 0 1600 190">
+  <rect width="1600" height="190" fill="#ffffff"/>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#111}
+    .h{font-weight:700;font-size:24px}
+    .t{font-weight:700;font-size:22px}
+    .s{font-size:15px;fill:#777}
+    .g{fill:#009b16}
+    .o{fill:#f07d00}
+    .p{fill:#8b1bb1}
+    .grid{stroke:#dddddd;stroke-width:1}
+  </style>
+  <line x1="0" y1="55" x2="1600" y2="55" class="grid"/>
+  <line x1="0" y1="127" x2="1600" y2="127" stroke="#d9a900" stroke-width="4"/>
+  <rect x="0" y="56" width="1600" height="71" fill="#fff4b3"/>
+  <line x1="0" y1="56" x2="1600" y2="56" stroke="#d9a900" stroke-width="4"/>
+  <g class="grid">
+    <line x1="72" y1="0" x2="72" y2="190"/>
+    <line x1="610" y1="0" x2="610" y2="190"/>
+    <line x1="680" y1="0" x2="680" y2="190"/>
+    <line x1="760" y1="0" x2="760" y2="190"/>
+    <line x1="850" y1="0" x2="850" y2="190"/>
+    <line x1="940" y1="0" x2="940" y2="190"/>
+    <line x1="1030" y1="0" x2="1030" y2="190"/>
+    <line x1="1120" y1="0" x2="1120" y2="190"/>
+    <line x1="1210" y1="0" x2="1210" y2="190"/>
+    <line x1="1300" y1="0" x2="1300" y2="190"/>
+    <line x1="1390" y1="0" x2="1390" y2="190"/>
+    <line x1="1490" y1="0" x2="1490" y2="190"/>
+  </g>
+  <text x="35" y="36" text-anchor="middle" class="h">#</text>
+  <text x="88" y="36" class="h">Who</text>
+  <text x="645" y="36" text-anchor="middle" class="h">=</text>
+  <text x="720" y="36" text-anchor="middle" class="h">*</text>
+  <text x="805" y="28" text-anchor="middle" class="h">A</text><text x="805" y="49" text-anchor="middle" class="s">500</text>
+  <text x="895" y="28" text-anchor="middle" class="h">B</text><text x="895" y="49" text-anchor="middle" class="s">1000</text>
+  <text x="985" y="28" text-anchor="middle" class="h">C</text><text x="985" y="49" text-anchor="middle" class="s">1500</text>
+  <text x="1075" y="28" text-anchor="middle" class="h">D</text><text x="1075" y="49" text-anchor="middle" class="s">2000</text>
+  <text x="1165" y="28" text-anchor="middle" class="h">E</text><text x="1165" y="49" text-anchor="middle" class="s">2750</text>
+  <text x="1255" y="28" text-anchor="middle" class="h">F</text><text x="1255" y="49" text-anchor="middle" class="s">3250</text>
+  <text x="1345" y="36" text-anchor="middle" class="h">Π</text>
+  <text x="1440" y="36" text-anchor="middle" class="h">Δ</text>
+  <text x="1545" y="36" text-anchor="middle" class="h">Rank</text>
+
+  <text x="35" y="100" text-anchor="middle" class="t">58 📌</text>
+  <text x="92" y="101" class="t" fill="#777">Nekkko</text>
+  <text x="645" y="101" text-anchor="middle" class="t">5639</text>
+  <text x="805" y="92" text-anchor="middle" class="t g">492</text><text x="805" y="116" text-anchor="middle" class="s">00:05</text>
+  <text x="895" y="92" text-anchor="middle" class="t g">893</text><text x="895" y="116" text-anchor="middle" class="s">00:18</text>
+  <text x="985" y="92" text-anchor="middle" class="t g">1217</text><text x="985" y="116" text-anchor="middle" class="s">00:59</text>
+  <text x="1075" y="92" text-anchor="middle" class="t g">1349</text><text x="1075" y="116" text-anchor="middle" class="s">01:34</text>
+  <text x="1165" y="92" text-anchor="middle" class="t g">1688</text><text x="1165" y="116" text-anchor="middle" class="s">01:55</text>
+  <text x="1345" y="101" text-anchor="middle" class="t o">2223</text>
+  <text x="1440" y="101" text-anchor="middle" class="t g">+388</text>
+  <text x="1545" y="101" text-anchor="middle" class="t g">+153 ↑ P</text>
+
+  <text x="35" y="166" text-anchor="middle" class="t">41</text>
+  <text x="92" y="166" class="t" fill="#1346d8">wangxiaojingzi</text>
+  <text x="645" y="166" text-anchor="middle" class="t">5880</text>
+  <text x="1345" y="166" text-anchor="middle" class="t o">2286</text>
+  <text x="1440" y="166" text-anchor="middle" class="t g">+141</text>
+  <text x="1545" y="166" text-anchor="middle" class="t p">+133 ↑ CM</text>
+</svg>
