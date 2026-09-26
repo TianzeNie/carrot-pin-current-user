@@ -12,6 +12,10 @@ A small fork of [Carrot, But Userscript](https://github.com/Yan233th/carrot-but-
 - Shows the reconstructed overall rank on the pinned row when available.
 - No Codeforces handle is hard-coded.
 
+## Preview
+
+![Pinned current-user row with Carrot prediction](./assets/preview.svg)
+
 ## Installation
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/).
