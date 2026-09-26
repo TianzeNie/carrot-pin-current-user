@@ -1,43 +1,62 @@
 # Carrot, But Userscript — Pin Current User
 
-A modified fork of [Yan233th/carrot-but-userscript](https://github.com/Yan233th/carrot-but-userscript) that keeps the currently logged-in Codeforces user visible at the top of standings and keeps Carrot rating prediction working when Codeforces' public standings response omits that contestant.
+A small fork of [Carrot, But Userscript](https://github.com/Yan233th/carrot-but-userscript) that keeps your own Codeforces standings row visible at the top of the page and preserves Carrot's rating prediction for that row.
 
-## What this fork changes
+## Features
 
-- Automatically detects the currently logged-in Codeforces handle; no handle is hard-coded.
-- Fetches the user's row from **Friends Standings** and pins a copy to the top of the visible standings table.
-- Preserves Carrot's predicted performance (`Π`), rating delta (`Δ`), and rank-change helper on the pinned row.
-- If the public `contest.standings` data omits the pinned contestant, rebuilds standings from `contest.status` (and hacks for CF-format contests) before calculating predictions.
-- Replaces the Friends Standings label such as `1 (93)` with the reconstructed overall rank when that rank is available.
-- Leaves the normal standings row untouched; the pinned row is an additional convenience copy.
+- Automatically detects the currently logged-in Codeforces handle.
+- Pins your row to the top of the standings table.
+- Shows Carrot's predicted performance (`Π`), rating delta (`Δ`), and rank-change helper on the pinned row.
+- Uses Friends Standings to recover your row when it is missing from the public standings page.
+- If public `contest.standings` data omits you, rebuilds standings from contest submissions before calculating the prediction.
+- Shows the reconstructed overall rank on the pinned row when available.
+- No Codeforces handle is hard-coded.
 
-## Install
+## Installation
 
-1. Install a userscript manager such as Tampermonkey.
+1. Install [Tampermonkey](https://www.tampermonkey.net/).
 2. Open [carrot-pin-current-user.user.js](./carrot-pin-current-user.user.js).
-3. Click **Raw** and install the userscript.
-4. Log in to Codeforces and open a contest standings page.
+3. Click **Raw**.
+4. Tampermonkey should open the installation page. Click **Install**.
+5. Log in to Codeforces and open a contest standings page.
 
-The pin feature only activates when the logged-in user appears in that contest's Friends Standings.
+> [!IMPORTANT]
+> On Chromium-based browsers such as Chrome or Edge, Tampermonkey may require the browser-level **Allow User Scripts** permission before userscripts can run.
+>
+> Open your browser's **Extensions / Manage extensions** page, open **Tampermonkey → Details**, and enable **Allow User Scripts** if the option is shown.
+>
+> If the script is installed but nothing happens on Codeforces, check this setting first and make sure Tampermonkey itself is enabled.
 
-## Why the fallback exists
+The pin feature activates only when your account appears in that contest's Friends Standings.
 
-In some live contests, the public standings data used by prediction tools can omit a contestant even though that contestant is visible in Friends Standings. In that case this fork reconstructs the contest standings from submissions before running Carrot's prediction algorithm. This avoids estimating rating change from an incomplete contestant pool.
+## How it works
 
-## Upstream and attribution
+Normally, Carrot calculates predictions from Codeforces standings data. In some contests, the public standings response can omit a contestant even though that contestant is still visible in Friends Standings.
 
-This project is a derivative work of **Carrot, But Userscript** by **Yan233_**:
+This fork:
 
-- Upstream: https://github.com/Yan233th/carrot-but-userscript
-- Original prediction/rendering logic remains credited to the upstream project.
-- The pin-current-user integration and missing-contestant fallback are modifications in this fork.
+1. detects the logged-in user;
+2. loads that user's row from Friends Standings;
+3. pins a copy to the top of the visible standings table;
+4. if necessary, rebuilds the standings from `contest.status`;
+5. runs Carrot's prediction logic with the recovered contestant included.
+
+## Upstream
+
+Based on **Carrot, But Userscript** by **Yan233_**:
+
+https://github.com/Yan233th/carrot-but-userscript
+
+The original prediction and rendering logic belongs to the upstream project. This fork adds the current-user pinning and missing-contestant fallback.
 
 ## License
 
-The upstream project is licensed under **GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)**. This derivative work is distributed under the same license. See [LICENSE](./LICENSE).
+Licensed under **AGPL-3.0-or-later**, matching the upstream project.
 
-## Known limitations
+See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
 
-- Codeforces can change its HTML structure or API behavior, which may require updates to handle detection or Friends Standings parsing.
-- Reconstructing a large live contest from `contest.status` can be slower than using the normal standings endpoint.
-- Team contests and contests that Carrot itself treats as unrated/unsupported retain Carrot's original limitations.
+## Notes
+
+- Rebuilding a large live contest from `contest.status` can be slower than using the normal standings endpoint.
+- Codeforces HTML/API changes may require future updates.
+- Existing Carrot limitations for unsupported or unrated contests still apply.
